@@ -373,6 +373,18 @@ test("protected example router", async () => {
 });
 ```
 
+For this to work within NextJS and secrets, consider adding the `envPrefix` argument to your config file.
+
+```ts
+export default defineConfig({
+  plugins: [react()],
+  envPrefix: "NEXT_PUBLIC_",
+ ....
+})
+```
+
+
+
 ## Useful Resources
 
 | Resource               | Link                                                    |
